@@ -18,9 +18,9 @@
                     <td>{{lista.DNI}}</td>
                     <td>{{lista.Telefono}}</td>
                     <td>{{lista.Correo}}</td>
-                    <td><b-button @click="Eliminar()" v-b-tooltip.hover title="Eliminar" variant="danger" ><b-icon icon="trash" aria-hidden="true"></b-icon>
+                    <td><b-button class="m-1" @click="Eliminar()" v-b-tooltip.hover title="Eliminar" variant="danger" ><b-icon icon="trash" aria-hidden="true"></b-icon>
                         </b-button>
-                        <b-button @click="Editar()" v-b-tooltip.hover title="Editar" variant="success"><b-icon icon="pen" aria-hidden="true"></b-icon>
+                        <b-button class="m-1" @click="Editar()" v-b-tooltip.hover title="Editar" variant="success"><b-icon icon="pen" aria-hidden="true"></b-icon>
                         </b-button>
                     </td>
                 </tr>
