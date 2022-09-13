@@ -3,7 +3,9 @@
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>|
-      <router-link to="/Mostrar">Mostrar</router-link>
+      <router-link to="/Mostrar">Mostrar</router-link>|
+      <router-link to="/Nuevo">Nuevo Registro</router-link>|
+      <router-link to="/ListarPosts">Listar Posts</router-link>
     </nav>
     <router-view/>
   </div>

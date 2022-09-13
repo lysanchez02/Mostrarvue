@@ -2,6 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Mostrar from '../views/Mostrar.vue'
+import Nuevo from '../views/Registrar.vue'
+import Editar from '../views/Editar.vue'
+import ListarPosts from '../views/Posts/ListarPosts.vue'
+import EditarP from '../views/Posts/EditarP.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +27,26 @@ const routes = [
     path: '/Mostrar',
     name: 'Mostrar',
     component: Mostrar
+  },
+  {
+    path: '/Nuevo',
+    name: 'Nuevo',
+    component: Nuevo
+  },  
+  {
+    path: '/Editar/:id',
+    name: 'Editar',
+    component: Editar
+  }, 
+  {
+    path: '/ListarPosts',
+    name: 'ListarPosts',
+    component: ListarPosts
+  },
+  {
+  path: '/EditarP/:id',
+  name: 'EditarP',
+  component: EditarP
   },
 ]
 
