@@ -6,6 +6,7 @@ import Nuevo from '../views/Registrar.vue'
 import Editar from '../views/Editar.vue'
 import ListarPosts from '../views/Posts/ListarPosts.vue'
 import EditarP from '../views/Posts/EditarP.vue'
+import NuevoP from '../views/Posts/NuevoP.vue'
 
 Vue.use(VueRouter)
 
@@ -48,6 +49,11 @@ const routes = [
   name: 'EditarP',
   component: EditarP
   },
+  {
+    path: '/NuevoP',
+    name: 'NuevoP',
+    component: NuevoP
+    },
 ]
 
 const router = new VueRouter({

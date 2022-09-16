@@ -18,7 +18,14 @@
                 <input type="text" class="form-control" name="idUsuario" id="idUsuario" v-model="post.idUsuario">
             </p>
         </form>
+        <div>
+        <b-button @click="guardar()" class="m-1" v-b-tooltip.hover title="guardar" variant="success" ><b-icon icon="save2" aria-hidden="true"></b-icon>Guardar
+        </b-button>
+        <b-button @click="salir()" class="m-1" v-b-tooltip.hover title="salir" variant="danger" ><b-icon icon="x-circle-fill" aria-hidden="true"></b-icon>Salir
+        </b-button>
+</div>
     </div>
+    
 </template>
 <script>
 import axios from 'axios';
@@ -34,6 +41,17 @@ export default{
                 'idUsuario':null,
             }
         }
+    },
+    methods:{
+        guardar(){
+            let variable=this.$route.params.id
+            axios.put("https://jsonplaceholder.typicode.com/posts/1"+variable,this.post).then(data=>{
+            this.$router.push("/ListarPosts")
+        });
+    
+    
+    },
+        salir(){this.$router.push("/ListarPosts")},
     },
     mounted:function(){
         let id=this.$route.params.id

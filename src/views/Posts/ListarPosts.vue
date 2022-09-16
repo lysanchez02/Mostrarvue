@@ -1,5 +1,7 @@
 <template>
     <div>
+        <b-button class="m-1" @click="NuevoP()" v-b-tooltip.hover title="Nuevo Post" variant="primary" ><b-icon icon="plus" aria-hidden="true"></b-icon>
+        </b-button>
         <table>
             <thead>
                 <tr>
@@ -36,6 +38,9 @@
             } 
         },
         methods: {
+            NuevoP(){       
+                this.$router.push("/NuevoP")         
+            },
             Eliminar(id){
                 alert('eliminar');
             },
